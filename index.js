@@ -1,8 +1,3 @@
-/*Generatore di password:
- Realizza un'applicazione che generi password casuali con determinate specifiche
-  (lunghezza, inclusione di lettere, numeri, caratteri speciali, ecc.).
-  Utilizza AVA per testare che le password generate rispettino i requisiti specificati.
-*/
 import {generaPassword} from "./generaPassword.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
