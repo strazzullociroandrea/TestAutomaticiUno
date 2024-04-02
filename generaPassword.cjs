@@ -2,12 +2,14 @@ const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567
 const generaPassword = (length) =>{
   try{
     
-    let id = '';
+    let password = '';
     for (let i = 0; i < length; i++) {
-        id += characters.charAt(Math.floor(Math.random() * characters.length));
+      password += characters.charAt(Math.floor(Math.random() * characters.length));
     }
-    return id;
-   
+    if(length > 40){
+      return password.substring(0,10);
+    }
+    return password;
   }catch(error){
     throw new Error(error.message);
   }

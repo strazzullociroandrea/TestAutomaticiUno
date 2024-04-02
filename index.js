@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const conf = JSON.parse(fs.readFileSync("conf.json"));
-const generatePassword = require("./generaPassword.js");
+const generatePassword = require("./generaPassword.cjs");
 const eseguiTest = require("./test.js");
 
 app.use(bodyParser.json());
@@ -21,10 +21,7 @@ app.post("/generaPassword", (request, response) => {
        const { length } = request.body;
 console.log(eseguiTest("Controllo lunghezza password",generatePassword(length),length));
     const password = generatePassword(length);
-    response.json({ result: {
-      psw: password,
-      
-    } });
+    response.json({result: password });
   } catch (error) {
     response.json({ result: "Password non generata" });
   }

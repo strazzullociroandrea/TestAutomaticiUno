@@ -17,7 +17,8 @@
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
-    "path": "^0.12.7",
-    "shortid": "^2.2.16"
-  }
+    "module": "^1.2.5",
+    "path": "^0.12.7"
+  },
+  "type": "module"
 }
