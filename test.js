@@ -1,7 +1,5 @@
 import test from "ava";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const generaPassword = require("./generaPassword.cjs");
+import {generaPassword} from "./generaPassword.js"
 
 /**
  * Funzione per eseguire un test con i vari controlli
